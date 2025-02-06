@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/main.css">
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
+      <div class="container">
+          <img class="imatge-logo" src="./public/logo-bookmark.svg" alt="Bookmark logo">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav" id="menu-superior">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <button type="button" class="btn btn-primary" id="login">Login</button>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+  
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+      <div class="row align-items-center">
+      <div class="col" id="text">
+          <h1 class="titol"> A Simple Bookmark Manager </h1>
+          <p class="paragraf"> A clean and simple interface to organize your favourite websites. 
+              Open a new browser tab and see your sites load instantly. Try it for free.</p>
+              <button type="button" class="btn btn-primary btn-lg" id="boto1">Get it on Chrome</button>
+              <button type="button" class="btn btn-secondary btn-lg" id="boto2">Get it on Firefox</button>
+      </div>
+
+          <div class="col" id="columna-imatge">
+            <img class="imatge-tablet" src="./public/illustration-hero.svg" alt="A tablet displaying an app interface" >
+            <div class="rectangle-blau"></div>
+          </div>
+      </div>
+    </div>
+      
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

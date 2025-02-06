@@ -1,0 +1,268 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+$primary: #5265E1;
+$secondary: #FA5959;
+$terciary: #797979;
+
+
+body {
+    background-color: transparent;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ /* Construcció base per a mòbils*/
+ @media only screen and (max-width: 767px) {
+
+    .navbar {
+     flex-direction: column;
+     justify-content: space-between;
+     position: fixed;
+     
+     
+    .navbar-toggler {
+         border: none;
+         padding: 2rem;
+         margin-right: 1rem;
+     }
+     
+    .imatge-logo {
+         box-sizing: content-box;
+         padding: 3rem 3rem;
+         width: 40%;
+     }   
+     
+    .container {
+         padding: 0;
+         margin: 0;
+     }
+     
+    .navbar-toggler-icon {
+         background-image: url('../public/icon-hamburger.svg') !important;
+         
+     }
+
+    
+}
+main {
+    padding: 1rem;
+}
+
+
+.col {
+    position: relative;
+    justify-content: center ;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#text {
+    text-align: center;
+    order: 2;
+    padding: 4rem 1rem;
+    position: relative;
+    margin: 0;
+    
+    .titol {
+        padding: 2rem;
+       font-size: 38px;
+       font-weight: 650;
+       margin: 0;
+    }
+
+    .paragraf {
+        padding: 0 4.5rem 2rem 4.5rem;
+        line-height: 180%;
+        margin: 0;
+        color: #605f5f;
+    }
+}
+
+#boto1, #boto2 {
+    font-size: 16px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   margin: 0.3rem;
+   border-radius: 0.3rem;
+   width: 12rem;
+   height: 3rem;
+}
+
+#boto1 {
+    background-color:  $primary;
+    box-shadow: none;
+}
+#boto2 {
+    background-color: #f7f7f7;
+    color: #797979;
+    border: none;
+}
+
+
+#columna-imatge {
+    position: relative;
+    width: 100%;
+    order: 1;
+}
+.imatge-tablet {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 13rem;
+}
+.rectangle-blau {
+    padding: 0;
+    margin: 0;
+    padding-right: 0;
+    width: 80%;
+    height: 40%;
+    border-radius: 100px 0px 0px 150px;
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0rem;
+    z-index: -1;
+    background-color: $primary;
+}
+}
+
+
+/* Media-query per a pantalles*/
+
+@media only screen and (min-width: 768px) {
+
+#navbar {
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-kerning: none;
+    background-color: white;
+
+    .imatge-logo {
+     padding: 2rem 5rem;
+    }
+
+    #navbarNav {
+        text-transform: uppercase;
+        justify-content: flex-end;
+    }
+
+    .nav-link:hover {
+        color: $secondary;
+    }
+       .nav-item {
+        margin: 1rem 2rem;
+
+        #login {
+            background-color: $secondary;
+            border: none;
+            font-size: 0.9rem;
+            width: 7rem;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            border-radius: 0.3rem;
+            text-transform: uppercase;
+
+        }
+
+        #login:hover {
+            background-color: #f7f7f7;
+            color: $secondary;
+            border:solid $secondary;
+        }
+       }
+}
+
+.row {
+    flex-direction: row;
+}
+
+#text{
+    position: relative;
+    margin-left: 7rem;
+    margin-top: 6rem;
+
+}
+
+.titol {
+    padding: 0rem 2rem;
+}
+
+.paragraf {
+    padding: 2rem;
+    width: 30rem;
+}
+
+.container-fluid {
+    background-color: transparent;
+}
+
+#boto1, #boto2 {
+    font-size: 16px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 0.3rem;
+}
+
+#boto1 {
+    margin-left: 2rem;
+    background-color:  $primary;
+}
+
+#boto1:hover {
+    background-color: #f7f7f7;
+    color: $primary;
+    border:solid $primary;
+    margin-top: -3px;
+}
+#boto2 {
+    margin-left: 1rem;
+    background-color: #f7f7f7;
+    color: #797979;
+    border: none;
+    margin-top: -3px;
+}
+
+#boto2:hover {
+    background-color: #f7f7f7;
+    color: $terciary;
+    border:solid $terciary;
+}
+
+#columna-imatge {
+    
+    order: 2;
+
+    .imatge-tablet {
+        justify-content: center;
+        padding-right: 3rem;
+        padding-left: 0;
+        padding-top: 5rem;
+        
+    }
+    .rectangle-blau {
+        margin-right: 0;
+        width: 35%;
+        height: 50%;
+        border-radius: 100px 0px 0px 140px;
+        position: absolute;
+        bottom: 4rem;
+        right: 0rem;
+        z-index: -1;
+        background-color: $primary;
+
+        }
+}
+
+}
+
+
