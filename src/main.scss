@@ -4,87 +4,118 @@
     box-sizing: border-box;
 }
 
-
 $primary: #5265E1;
 $secondary: #FA5959;
-$terciary: #797979;
+$gris: #797979;
 
+    body {
+    background-color: transparent;
+    padding-top: 15rem;
+}
 
-body {
+    html, body {
+    height: 100vh;
+  }
+
+  .container-fluid {
     background-color: transparent;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+ /* Construcció base (per a mòbils)*/
+ //--------------------------------------------------------------------//
 
- /* Construcció base per a mòbils*/
- @media only screen and (max-width: 767px) {
-
-    .navbar {
-     flex-direction: column;
-     justify-content: space-between;
-     position: fixed;
-     
-     
-    .navbar-toggler {
-         border: none;
-         padding: 2rem;
-         margin-right: 1rem;
-     }
-     
-    .imatge-logo {
-         box-sizing: content-box;
-         padding: 3rem 3rem;
-         width: 40%;
-     }   
-     
-    .container {
-         padding: 0;
-         margin: 0;
-     }
-     
-    .navbar-toggler-icon {
-         background-image: url('../public/icon-hamburger.svg') !important;
-         
-     }
-
+ /* Barra de navegació */
+    #navbar {
+        background-color: white;
+        flex-wrap: nowrap;
+        
+        .imatge-logo {
+            box-sizing: content-box;
+            padding: 1rem 2rem;
+            width: 70%;
+        }   
+        
+        .navbar-toggler-icon {
+            background-image: url('../public/icon-hamburger.svg') !important;
+            background-size: contain;
+            
+        }
     
-}
-main {
-    padding: 1rem;
-}
-
-
-.col {
-    position: relative;
-    justify-content: center ;
-}
-.row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#text {
-    text-align: center;
-    order: 2;
-    padding: 4rem 1rem;
-    position: relative;
-    margin: 0;
-    
-    .titol {
-        padding: 2rem;
-       font-size: 38px;
-       font-weight: 650;
-       margin: 0;
     }
 
+    
+//      menú desplegable
+//     .navbar-collapse {
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         background-color: rgba($primary, 0.5);
+//         display: none;
+//         z-index: 10;
+//         justify-content: center;
+//         align-items: center;
+//         text-align: center;
+
+//         &.show {
+//             display: flex;
+//         }
+
+//         .navbar-nav {
+//             flex-direction: column;
+
+//             .nav-item {
+//                 margin: 10px 0;
+//             }
+
+//             .nav-link,
+//             .btn {
+//                 color: white;
+//                 font-size: 1.5em;
+//             }
+//         }
+//     }
+// }
+
+
+/* Apartat imatge*/
+
+
+#imatge-tablet {
+ padding-top: 70rem;
+    z-index: 0;
+    }
+
+.rectangle-blau {
+    padding: 0;
+    margin: 0;
+    width: 80vw;
+    height: 20%;
+    border-radius: 100px 0px 0px 150px;
+    position: absolute;
+    bottom: 0;
+    right: 0rem;
+    z-index: -1;
+    aspect-ratio: 2/1;
+    background-color: $primary;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+/* Apartat text*/
+#text {
+    padding: 3rem 0rem;
+    
+    .titol {
+        font-size: 38px;
+        font-weight: 600;
+        margin: 1.5rem;
+    }
+    
     .paragraf {
-        padding: 0 4.5rem 2rem 4.5rem;
+        padding: 0rem 2rem;
         line-height: 180%;
-        margin: 0;
         color: #605f5f;
     }
 }
@@ -92,177 +123,284 @@ main {
 #boto1, #boto2 {
     font-size: 16px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-   margin: 0.3rem;
-   border-radius: 0.3rem;
-   width: 12rem;
-   height: 3rem;
+    margin: 1rem 0.5rem;
+    border-radius: 0.3rem;
+    width: 10rem;
+    height: 3rem;
 }
 
 #boto1 {
     background-color:  $primary;
     box-shadow: none;
 }
+
 #boto2 {
-    background-color: #f7f7f7;
-    color: #797979;
-    border: none;
-}
-
-
-#columna-imatge {
-    position: relative;
-    width: 100%;
-    order: 1;
-}
-.imatge-tablet {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding-top: 13rem;
-}
-.rectangle-blau {
-    padding: 0;
-    margin: 0;
-    padding-right: 0;
-    width: 80%;
-    height: 40%;
-    border-radius: 100px 0px 0px 150px;
-    position: absolute;
-    bottom: -0.5rem;
-    right: 0rem;
-    z-index: -1;
-    background-color: $primary;
-}
-}
-
-
-/* Media-query per a pantalles*/
-
-@media only screen and (min-width: 768px) {
-
-#navbar {
-    display: flex;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    font-kerning: none;
     background-color: white;
+    color: $gris;
+}
 
-    .imatge-logo {
-     padding: 2rem 5rem;
+.card {
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+
+// /* Tablets */
+// @media screen and (min-width: 481px) and (max-width: 768px) {
+    
+//     .rectangle-blau {
+//         padding: 0;
+//         margin: 0;
+//         padding-right: 0;
+//         width: 80vw;
+//         height: 50%;
+//         border-radius: 100px 0px 0px 150px;
+//         position: absolute;
+//         bottom: 0;
+//         right: 0rem;
+//         z-index: -1;
+//         background-color: $primary;
+//         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+//     }
+//   }
+
+
+/* Media-query per a pantalles mitjanes */
+
+// @media only screen and (min-width: 768px) and (max-width: 1399px) {
+
+//     #text {
+//         order: 1; 
+//     }
+//     #navbar {
+//         display: flex;
+//         font-family: Arial, sans-serif;
+//         font-size: 1rem;
+//         justify-content: space-between;
+//         align-items: center;
+//         font-kerning: none;
+//         background-color: white;
+    
+//         .imatge-logo {
+//          padding: 2rem 5rem;
+//         }
+    
+//         #navbarNav {
+//             text-transform: uppercase;
+//             justify-content: flex-end;
+//         }
+    
+//         .nav-link:hover {
+//             color: $secondary;
+//         }
+//            .nav-item {
+//             margin: 1rem 2rem;
+    
+//             #login {
+//                 background-color: $secondary;
+//                 border: none;
+//                 font-size: 0.9rem;
+//                 width: 7rem;
+//                 box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+//                 border-radius: 0.3rem;
+//                 text-transform: uppercase;
+    
+//             }
+    
+//             #login:hover {
+//                 background-color: #f7f7f7;
+//                 color: $secondary;
+//                 border:solid $secondary;
+//             }
+//          }}
+
+//     .row {
+//     flex-direction: row;
+// }
+        
+//         #text{
+//             position: relative;
+//             margin-left: 7rem;
+//             margin-top: 6rem;
+        
+            
+//             .titol {
+//                 padding: 0rem 2rem;
+//             }
+            
+//             .paragraf {
+//                 padding: 2rem;
+//                 width: 30rem;
+//             }
+            
+//         }
+        
+//         #columna-imatge {
+    
+//             order: 2;
+        
+//             .imatge-tablet {
+//                 justify-content: center;
+//                 padding-right: 3rem;
+//                 padding-left: 0;
+//                 padding-top: 5rem;
+                
+//             }
+        
+//         }
+
+//     .rectangle-blau {
+//         padding: 0;
+//         margin: 0;
+//         padding-right: 0;
+//         width: 80vw;
+//         height: 45vh;
+//         border-radius: 100px 0px 0px 150px;
+//         position: absolute;
+//         bottom: 0;
+//         right: 0rem;
+//         z-index: -1;
+//         background-color: $primary;
+//         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+//     }
+    
+//     }
+
+    
+    
+    
+//     // /* Media-query per a pantalles grans*/
+    
+//     @media only screen and (min-width: 1400px) {
+
+//         #navbar {
+//             display: flex;
+//             font-family: Arial, sans-serif;
+//             font-size: 1rem;
+//             justify-content: space-between;
+//             align-items: center;
+//             font-kerning: none;
+//             background-color: white;
+        
+//             .imatge-logo {
+//              padding: 2rem 5rem;
+//             }
+        
+//             #navbarNav {
+//                 text-transform: uppercase;
+//                 justify-content: flex-end;
+//             }
+        
+//             .nav-link:hover {
+//                 color: $secondary;
+//             }
+//                .nav-item {
+//                 margin: 1rem 2rem;
+        
+//                 #login {
+//                     background-color: $secondary;
+//                     border: none;
+//                     font-size: 0.9rem;
+//                     width: 7rem;
+//                     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+//                     border-radius: 0.3rem;
+//                     text-transform: uppercase;
+        
+//                 }
+        
+//                 #login:hover {
+//                     background-color: #f7f7f7;
+//                     color: $secondary;
+//                     border:solid $secondary;
+//                 }
+//                }
+//         }
+
+//         .rectangle-blau{
+//             padding: 0;
+//     margin: 0;
+//     padding-right: 0;
+//     width: 80vw;
+//     height: 45%;
+//     border-radius: 100px 0px 0px 150px;
+//     position: absolute;
+//     bottom: 0;
+//     right: 0rem;
+//     z-index: -1;
+//     aspect-ratio: 2/1;
+//     background-color: $primary;
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    
+//             }
+        
+//         }
+
+
+/* Media Queries for Tablets and Medium Screens */
+@media screen and (min-width: 481px) and (max-width: 1399px) {
+    .rectangle-blau {
+        height: 50%;
     }
 
+    #navbar .imatge-logo {
+        padding: 2rem 5rem;
+    }
+    
     #navbarNav {
-        text-transform: uppercase;
         justify-content: flex-end;
+        text-transform: uppercase;
     }
-
+    
+    .nav-item {
+        margin: 1rem 2rem;
+    }
+    
     .nav-link:hover {
         color: $secondary;
     }
-       .nav-item {
-        margin: 1rem 2rem;
-
-        #login {
-            background-color: $secondary;
-            border: none;
-            font-size: 0.9rem;
-            width: 7rem;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-            border-radius: 0.3rem;
-            text-transform: uppercase;
-
-        }
-
-        #login:hover {
-            background-color: #f7f7f7;
-            color: $secondary;
-            border:solid $secondary;
-        }
-       }
-}
-
-.row {
-    flex-direction: row;
-}
-
-#text{
-    position: relative;
-    margin-left: 7rem;
-    margin-top: 6rem;
-
-}
-
-.titol {
-    padding: 0rem 2rem;
-}
-
-.paragraf {
-    padding: 2rem;
-    width: 30rem;
-}
-
-.container-fluid {
-    background-color: transparent;
-}
-
-#boto1, #boto2 {
-    font-size: 16px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    border-radius: 0.3rem;
-}
-
-#boto1 {
-    margin-left: 2rem;
-    background-color:  $primary;
-}
-
-#boto1:hover {
-    background-color: #f7f7f7;
-    color: $primary;
-    border:solid $primary;
-    margin-top: -3px;
-}
-#boto2 {
-    margin-left: 1rem;
-    background-color: #f7f7f7;
-    color: #797979;
-    border: none;
-    margin-top: -3px;
-}
-
-#boto2:hover {
-    background-color: #f7f7f7;
-    color: $terciary;
-    border:solid $terciary;
-}
-
-#columna-imatge {
     
-    order: 2;
-
-    .imatge-tablet {
-        justify-content: center;
-        padding-right: 3rem;
-        padding-left: 0;
-        padding-top: 5rem;
-        
+    #login {
+        background-color: $secondary;
+        border: none;
+        font-size: 0.9rem;
+        width: 7rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        border-radius: 0.3rem;
+        text-transform: uppercase;
     }
-    .rectangle-blau {
-        margin-right: 0;
-        width: 35%;
-        height: 50%;
-        border-radius: 100px 0px 0px 140px;
-        position: absolute;
-        bottom: 4rem;
-        right: 0rem;
-        z-index: -1;
-        background-color: $primary;
-
+    
+    #login:hover {
+        background-color: #f7f7f7;
+        color: $secondary;
+        border: solid $secondary;
+    }
+    
+    .row {
+        flex-direction: row;
+    }
+    
+    #text {
+        margin-left: 7rem;
+        margin-top: 6rem;
+        .titol {
+            padding: 0rem 2rem;
         }
+        .paragraf {
+            padding: 2rem;
+            width: 30rem;
+        }
+    }
+    
+    #columna-imatge {
+        order: 2;
+        .imatge-tablet {
+            padding-right: 3rem;
+            padding-top: 5rem;
+        }
+    }
 }
 
-}
-
-
+/* Media Queries for Large Screens */
+@media only screen and (min-width: 1400px) {
+    .rectangle-blau {
+        height: 45%;
+    }}

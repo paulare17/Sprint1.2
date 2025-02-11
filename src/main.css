@@ -7,135 +7,112 @@
 
 body {
   background-color: transparent;
+  padding-top: 15rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+html, body {
+  height: 100vh;
 }
 
-/* Construcció base per a mòbils*/
-@media only screen and (max-width: 767px) {
-  .navbar {
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-  }
-  .navbar .navbar-toggler {
-    border: none;
-    padding: 2rem;
-    margin-right: 1rem;
-  }
-  .navbar .imatge-logo {
-    box-sizing: content-box;
-    padding: 3rem 3rem;
-    width: 40%;
-  }
-  .navbar .container {
-    padding: 0;
-    margin: 0;
-  }
-  .navbar .navbar-toggler-icon {
-    background-image: url("../public/icon-hamburger.svg") !important;
-  }
-  main {
-    padding: 1rem;
-  }
-  .col {
-    position: relative;
-    justify-content: center;
-  }
-  .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #text {
-    text-align: center;
-    order: 2;
-    padding: 4rem 1rem;
-    position: relative;
-    margin: 0;
-  }
-  #text .titol {
-    padding: 2rem;
-    font-size: 38px;
-    font-weight: 650;
-    margin: 0;
-  }
-  #text .paragraf {
-    padding: 0 4.5rem 2rem 4.5rem;
-    line-height: 180%;
-    margin: 0;
-    color: #605f5f;
-  }
-  #boto1, #boto2 {
-    font-size: 16px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    margin: 0.3rem;
-    border-radius: 0.3rem;
-    width: 12rem;
-    height: 3rem;
-  }
-  #boto1 {
-    background-color: #5265E1;
-    box-shadow: none;
-  }
-  #boto2 {
-    background-color: #f7f7f7;
-    color: #797979;
-    border: none;
-  }
-  #columna-imatge {
-    position: relative;
-    width: 100%;
-    order: 1;
-  }
-  .imatge-tablet {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding-top: 13rem;
-  }
+.container-fluid {
+  background-color: transparent;
+}
+
+/* Construcció base (per a mòbils)*/
+/* Barra de navegació */
+#navbar {
+  background-color: white;
+  flex-wrap: nowrap;
+}
+#navbar .imatge-logo {
+  box-sizing: content-box;
+  padding: 1rem 2rem;
+  width: 70%;
+}
+#navbar .navbar-toggler-icon {
+  background-image: url("../public/icon-hamburger.svg") !important;
+  background-size: contain;
+}
+
+/* Apartat imatge*/
+#imatge-tablet {
+  padding-top: 70rem;
+  z-index: 0;
+}
+
+.rectangle-blau {
+  padding: 0;
+  margin: 0;
+  width: 80vw;
+  height: 20%;
+  border-radius: 100px 0px 0px 150px;
+  position: absolute;
+  bottom: 0;
+  right: 0rem;
+  z-index: -1;
+  aspect-ratio: 2/1;
+  background-color: #5265E1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Apartat text*/
+#text {
+  padding: 3rem 0rem;
+}
+#text .titol {
+  font-size: 38px;
+  font-weight: 600;
+  margin: 1.5rem;
+}
+#text .paragraf {
+  padding: 0rem 2rem;
+  line-height: 180%;
+  color: #605f5f;
+}
+
+#boto1, #boto2 {
+  font-size: 16px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin: 1rem 0.5rem;
+  border-radius: 0.3rem;
+  width: 10rem;
+  height: 3rem;
+}
+
+#boto1 {
+  background-color: #5265E1;
+  box-shadow: none;
+}
+
+#boto2 {
+  background-color: white;
+  color: #797979;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+/* Media-query per a pantalles mitjanes */
+/* Media Queries for Tablets and Medium Screens */
+@media screen and (min-width: 481px) and (max-width: 1399px) {
   .rectangle-blau {
-    padding: 0;
-    margin: 0;
-    padding-right: 0;
-    width: 80%;
-    height: 40%;
-    border-radius: 100px 0px 0px 150px;
-    position: absolute;
-    bottom: -0.5rem;
-    right: 0rem;
-    z-index: -1;
-    background-color: #5265E1;
-  }
-}
-/* Media-query per a pantalles*/
-@media only screen and (min-width: 768px) {
-  #navbar {
-    display: flex;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    font-kerning: none;
-    background-color: white;
+    height: 50%;
   }
   #navbar .imatge-logo {
     padding: 2rem 5rem;
   }
-  #navbar #navbarNav {
-    text-transform: uppercase;
+  #navbarNav {
     justify-content: flex-end;
+    text-transform: uppercase;
   }
-  #navbar .nav-link:hover {
-    color: #FA5959;
-  }
-  #navbar .nav-item {
+  .nav-item {
     margin: 1rem 2rem;
   }
-  #navbar .nav-item #login {
+  .nav-link:hover {
+    color: #FA5959;
+  }
+  #login {
     background-color: #FA5959;
     border: none;
     font-size: 0.9rem;
@@ -144,7 +121,7 @@ img {
     border-radius: 0.3rem;
     text-transform: uppercase;
   }
-  #navbar .nav-item #login:hover {
+  #login:hover {
     background-color: #f7f7f7;
     color: #FA5959;
     border: solid #FA5959;
@@ -153,66 +130,28 @@ img {
     flex-direction: row;
   }
   #text {
-    position: relative;
     margin-left: 7rem;
     margin-top: 6rem;
   }
-  .titol {
+  #text .titol {
     padding: 0rem 2rem;
   }
-  .paragraf {
+  #text .paragraf {
     padding: 2rem;
     width: 30rem;
-  }
-  .container-fluid {
-    background-color: transparent;
-  }
-  #boto1, #boto2 {
-    font-size: 16px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    border-radius: 0.3rem;
-  }
-  #boto1 {
-    margin-left: 2rem;
-    background-color: #5265E1;
-  }
-  #boto1:hover {
-    background-color: #f7f7f7;
-    color: #5265E1;
-    border: solid #5265E1;
-    margin-top: -3px;
-  }
-  #boto2 {
-    margin-left: 1rem;
-    background-color: #f7f7f7;
-    color: #797979;
-    border: none;
-    margin-top: -3px;
-  }
-  #boto2:hover {
-    background-color: #f7f7f7;
-    color: #797979;
-    border: solid #797979;
   }
   #columna-imatge {
     order: 2;
   }
   #columna-imatge .imatge-tablet {
-    justify-content: center;
     padding-right: 3rem;
-    padding-left: 0;
     padding-top: 5rem;
   }
-  #columna-imatge .rectangle-blau {
-    margin-right: 0;
-    width: 35%;
-    height: 50%;
-    border-radius: 100px 0px 0px 140px;
-    position: absolute;
-    bottom: 4rem;
-    right: 0rem;
-    z-index: -1;
-    background-color: #5265E1;
+}
+/* Media Queries for Large Screens */
+@media only screen and (min-width: 1400px) {
+  .rectangle-blau {
+    height: 45%;
   }
 }
 
