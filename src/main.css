@@ -7,11 +7,6 @@
 
 body {
   background-color: transparent;
-  padding-top: 15rem;
-}
-
-html, body {
-  height: 100vh;
 }
 
 .container-fluid {
@@ -23,6 +18,10 @@ html, body {
 #navbar {
   background-color: white;
   flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 #navbar .imatge-logo {
   box-sizing: content-box;
@@ -36,8 +35,8 @@ html, body {
 
 /* Apartat imatge*/
 #imatge-tablet {
-  padding-top: 70rem;
   z-index: 0;
+  padding-top: 10rem;
 }
 
 .rectangle-blau {
@@ -93,8 +92,54 @@ html, body {
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
-/* Media-query per a pantalles mitjanes */
-/* Media Queries for Tablets and Medium Screens */
+/*Apartat pestanyes*/
+#featureContent {
+  position: relative;
+}
+
+.rectangle-blau-pestanya {
+  padding: 0;
+  margin: 0;
+  width: 80vw;
+  height: 60%;
+  border-radius: 0px 100px 100px 0px;
+  position: absolute;
+  left: 0rem;
+  top: 20%;
+  z-index: -1;
+  aspect-ratio: 2/1;
+  background-color: #5265E1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Apartat footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+  flex-grow: 1;
+  background-color: #242946;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#container-footer {
+  margin-bottom: auto;
+  height: 10rem;
+  background-color: #5265E1;
+  width: 100%;
+  padding: 2rem 0;
+  color: white;
+  text-align: center;
+}
+
+#boto-mail {
+  background-color: #FA5959;
+}
+
 @media screen and (min-width: 481px) and (max-width: 1399px) {
   .rectangle-blau {
     height: 50%;

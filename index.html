@@ -57,79 +57,87 @@
       
       <section class="container-fluid d-flex justify-content-center align-items-center">
         <div class="row align-items-center position-relative d-flex flex-column flex-md-row">
-          <div class="col position-relative text-center">
-            <h2>Features</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Quo qui iste voluptas voluptatum cum voluptate. Obcaecati, amet quae provident 
-            veritatis expedita dolores maxime recusandae excepturi eligendi officiis hic quasi sequi?</p>
-            <!-- Versió mòbil: Collapse -->
-            <div class="accordion accordion-flush d-block d-md-none" id="accordionSegonApartat">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Simple Bookmarking
-                  </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionSegonApartat">
-                  <div class="accordion-body">Contingut de la Pestanya 1
-                  </div>
+            <div class="col position-relative text-center">
+                <h2>Features</h2>
+                <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+    
+                <!-- Versió mòbil: Collapse -->
+                <div class="accordion accordion-flush d-block d-md-none" id="accordionSegonApartat">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-transparent" type="button" data-feature="pestanya1">
+                                Simple Bookmarking
+                            </button>
+                        </h2>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-transparent" type="button" data-feature="pestanya2">
+                                Speedy Features
+                            </button>
+                        </h2>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-transparent" type="button" data-feature="pestanya3">
+                                Easy Sharing
+                            </button>
+                        </h2>
+                    </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Speedy Features
-                  </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionSegonApartat">
-                  <div class="accordion-body">Contingut de la Pestanya 2</div>
+    
+                <!-- Versió escriptori: Pestanyes -->
+                
+                <div class="d-none d-md-block mt-4">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-feature="pestanya1">Pestanya 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-feature="pestanya2">Pestanya 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-feature="pestanya3">Pestanya 3</a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Easy Sharing
-                  </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionSegonApartat">
-                  <div class="accordion-body">Contingut de la Pestanya 3</div>
+    
+                <!-- Contingut reutilitzable -->
+                <div id="featureContent" class="m-0">
+                  <div class="col position-relative text-center"> 
+                    <div class="feature-item" id="pestanya1">
+                        <img class="img-fluid p-3" src="./public/illustration-features-tab-1.svg" alt="Illustration of a bookmark">
+                        <div class="rectangle-blau-pestanya"></div>
+                        <h2 class="p-3">Bookmark in one click</h2>
+                        <p>Organize yout bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                    </div>
+                    <div class="feature-item d-none" id="pestanya2">
+                        <img class="img-fluid p-3" src="./public/illustration-features-tab-2.svg" alt="Illustration of a bookmark">
+                        <div class="rectangle-blau-pestanya"></div>
+                        <h2 class="p-3">Intelligent Search</h2>
+                        <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                      </div>
+                      <div class="feature-item d-none" id="pestanya3">
+                        <img class="img-fluid p-3" src="./public/illustration-features-tab-3.svg" alt="Illustration of a bookmark">
+                        <div class="rectangle-blau-pestanya"></div>
+                        <h2 class="p-3">Share your bookmarks</h2>
+                        <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button</p>
+                      </div>
+                      
+                    </div>
                 </div>
-              </div>
             </div>
-      
-            <!-- Versió escriptori: Pestanyes -->
-            <div class="d-none d-md-block">
-              <ul class="nav nav-tabs" id="myTab">
-                <li class="nav-item">
-                  <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1Content">Pestanya 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2Content">Pestanya 2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#tab3Content">Pestanya 3</a>
-                </li>
-              </ul>
-              <div class="tab-content mt-3">
-                <div class="tab-pane fade show active" id="tab1Content">
-                  <p>Contingut de la Pestanya 1</p>
-                </div>
-                <div class="tab-pane fade" id="tab2Content">
-                  <p>Contingut de la Pestanya 2</p>
-                </div>
-                <div class="tab-pane fade" id="tab3Content">
-                  <p>Contingut de la Pestanya 3</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-      <button id="closeBtn"></button>
-<div class="navbar-collapse">
-      
+    </section>
 
+      
       <section> 
+        <div class="row justify-content-center">
+          <div class="col p-3">
+        <h2 class="text-center">Download the extension</h2>
+        <p class="text-center">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
+      </div>
+      </div>
           <div class="container d-flex flex-column justify-content-center align-items-center">
             <div class="card text-center mb-3 border-0" style="width: 18rem;">
               <div class="card-body">
@@ -169,7 +177,7 @@
       </section>
       
       <section>
-        <h2>Frequently Asked Questions</h2>
+        <h2 class="text-center">Frequently Asked Questions</h2>
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -178,7 +186,7 @@
               </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+              <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, aliquam sit optio dolore ex adipisci quod rerum repudiandae mollitia dolorem?</div>
             </div>
           </div>
           <div class="accordion-item">
@@ -188,7 +196,7 @@
               </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+              <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis tempora laborum quo repellendus veniam eos obcaecati nobis temporibus illo.</div>
             </div>
           </div>
           <div class="accordion-item">
@@ -198,7 +206,7 @@
               </button>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore velit veniam quasi adipisci maxime animi tempore perferendis minus harum pariatur.</div>
             </div>
           </div>
           <div class="accordion-item">
@@ -208,7 +216,7 @@
               </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+              <div class="accordion-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis cum aspernatur ducimus temporibus obcaecati dicta repudiandae, distinctio laudantium accusantium excepturi.</div>
             </div>
           </div>
         </div>
@@ -216,7 +224,28 @@
       </section>
 
 
+      <footer class="navbar-fixed-bottom d-flex flex-column">
+        <div class="row">
+          <div class="col">
+            <div id="container-footer">
+              <p class="text-uppercase">35.000+ already joined</p>
+              <h2>Stay up-to-date whit what we're doing</h2>
+              <form>
+                <div class="mb-3">
+                  <label for="InputEmail1" class="form-label">Enter your email adress</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary" type="button" id="boto-mail">Contact us</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
+
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
